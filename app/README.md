@@ -1,4 +1,4 @@
-# print
+# app
 
 ## Project setup
 ```
