@@ -14,9 +14,11 @@
       }
     },
     mounted() {
-      axios.get('https://api.coindesk.com/v1/bpi/currentprice.json', {'Access-Control-Allow-Origin': '*'}).then(response => {
+      axios.get('local', {
+        'Access-Control-Allow-Origin': '*'
+      }).then(response => {
         let result = response.data.bpi;
-        for(let el in result){
+        for (let el in result) {
           this.Users.push(result[el]);
         }
       });
