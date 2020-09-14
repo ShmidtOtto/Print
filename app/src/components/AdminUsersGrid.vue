@@ -14,12 +14,13 @@
       }
     },
     mounted() {
-      axios.get('local', {
+      console.log("test");
+      axios.get('http://localhost:3000/users', {
         'Access-Control-Allow-Origin': '*'
       }).then(response => {
-        let result = response.data.bpi;
-        for (let el in result) {
-          this.Users.push(result[el]);
+        console.log(response.data);
+        for(let i = 0, length = response.data.length; i < length; i++){
+            this.Users.push(response.data[i]);
         }
       });
     }

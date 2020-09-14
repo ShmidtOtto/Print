@@ -1,7 +1,7 @@
-const mongoose = require( "mongoose" );
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema( {
+const userSchema = new Schema({
 	UserName: String,
 	Email: String,
 	Password: String,
@@ -9,10 +9,10 @@ const userSchema = new Schema( {
 	DateOfRegistration: Date,
 	DateOfLastLogin: Date,
 	CreateDate: Date,
-	Printers: [ {
+	Printers: [{
 		type: Schema.Types.ObjectId,
 		ref: "Printer"
-	} ]
-} );
+	}]
+});
 
-module.exports = mongoose.model( "User", userSchema );
+module.exports = mongoose.model("User", userSchema);
