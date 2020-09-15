@@ -1,11 +1,15 @@
 <template>
   <div class="test">
     <router-view></router-view>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Footer from "../components/Footer.vue";
 export default {
-  name: 'AdminPage'
+  components: {
+      Footer
+  }
 }
 </script>
